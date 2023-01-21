@@ -1,0 +1,44 @@
+﻿.value {
+    font-size: 78px;
+    margin-top: 2px;
+    text-align: center;
+}
+
+
+
+.textbox {
+    font-size: 32px;
+    padding: 2px;
+    width: 64px;
+    text-align: center;
+}
+
+li {
+    align-items: center;
+    align-self: center;
+}
+
+.box {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+    .box .numberSpan {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+.switch {
+    margin-bottom: 10px;
+    display: flex;
+    justify-content: flex-end;
+    margin-left: auto;
+    margin-right: 0;
+}
+
+.card {
+    width: 300px;
+    margin-top: 16px;
+}
