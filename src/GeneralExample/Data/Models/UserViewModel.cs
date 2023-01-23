@@ -1,4 +1,4 @@
-﻿namespace GeneralExampleSvc.Models
+﻿namespace GeneralExampleSvc.Data.Models
 {
     public class UserViewModel
     {

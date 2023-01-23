@@ -1,8 +1,6 @@
 ﻿using AutoMapper;
-using AutoMapper.QueryableExtensions;
 using GeneralExampleSvc.Data;
 using GeneralExampleSvc.Data.Models;
-using GeneralExampleSvc.Models;
 
 namespace GeneralExampleSvc.Services
 {
@@ -17,10 +15,8 @@ namespace GeneralExampleSvc.Services
         }
 
         public IEnumerable<UserViewModel> All()
-        { 
-            var x=_mapper.ProjectTo<UserViewModel>(_dbContextExample.Users);
-            return x;
-        }
+            => _mapper.ProjectTo<UserViewModel>(_dbContextExample.Users);
+
 
         // TODO: Maybe we shouldn't pass a model from db
         // -- use autmapper

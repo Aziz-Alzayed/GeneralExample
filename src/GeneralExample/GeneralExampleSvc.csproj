@@ -42,7 +42,6 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\GeneralExample.Data\GeneralExample.Data.csproj" />
     <ProjectReference Include="..\GeneralExample.Models\GeneralExample.Models.csproj" />
   </ItemGroup>
 
