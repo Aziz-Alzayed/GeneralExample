@@ -14,7 +14,7 @@ This is a simple project as a proof  of coding. 😊
   - AutoMapper
   - JSON Web Token
 - Front-End
-  - JavaScript (TypeScript)
+  - JavaScript
   - ReactJS
   - Fetch API
   - AntDesign
