@@ -1,5 +1,4 @@
-﻿
-using GeneralExampleSvc.Data.Models;
+﻿using GeneralExampleSvc.Data.Models;
 using GeneralExampleSvc.Models;
 using GeneralExampleSvc.Services;
 using Microsoft.AspNetCore.Identity;

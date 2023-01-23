@@ -1,3 +1,5 @@
+using System;
+
 namespace GeneralExampleSvc.Models
 {
     public class WeatherForecast
