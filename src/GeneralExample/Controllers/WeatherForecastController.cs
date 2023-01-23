@@ -1,4 +1,5 @@
-﻿using Microsoft.AspNetCore.Mvc;
+﻿using GeneralExampleSvc.Models;
+using Microsoft.AspNetCore.Mvc;
 
 namespace GeneralExample.Controllers
 {

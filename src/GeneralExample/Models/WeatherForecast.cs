@@ -1,4 +1,4 @@
-namespace GeneralExample
+namespace GeneralExampleSvc.Models
 {
     public class WeatherForecast
     {

@@ -8,7 +8,6 @@ import AvatarMenu from '../avatarMenu/AvatarMenu';
 const NavMenu = () => {
     const [current, setCurrent] = useState('home');
     const onClick: MenuProps['onClick'] = (e) => {
-        console.log('click ', e);
         setCurrent(e.key);
     };
 
@@ -44,11 +43,11 @@ const NavMenu = () => {
         ,
         {
             label: (
-                <Link to='/fetch-database' >
-                    Fetch database
+                <Link to='/all-users' >
+                    Fetch All users
                 </Link>
             ),
-            key: 'fetch-database',
+            key: 'all-users',
             icon: <BarChartOutlined />,
         }
     ];

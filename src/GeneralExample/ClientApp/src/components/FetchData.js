@@ -1,16 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { Table } from 'antd';
-import type { ColumnsType, TableProps } from 'antd/es/table';
 
-interface DataType {
-    key: React.Key;
-    date: string;
-    temperatureC: number;
-    temperatureF: number;
-    summary: string;
-}
-
-const columns: ColumnsType<DataType> = [
+const columns= [
     {
         title: 'Date',
         dataIndex: 'date',
@@ -38,26 +29,27 @@ const columns: ColumnsType<DataType> = [
 ];
 function FetchData() {
     const [forecasts, setForecasts] = useState([]);
+    const [loading, setLoading] = useState(true);
     useEffect(() => {
         populateWeatherData();
     }, []);
 
 
     const populateWeatherData = async () => {
-        const response = await fetch('weatherforecast');
-        const data = await response.json();
-        setForecasts(data);
+        fetch('weatherforecast')
+            .then(response => response.json())
+            .then(data => {
+                setForecasts(data);
+                setLoading(false);
+            });
     };
-    const onChange: TableProps<DataType>['onChange'] = (pagination, filters, sorter, extra) => {
-        console.log('params', pagination, filters, sorter, extra);
-    };
+
     return (
         <div>
             <h1 id="tableLabel">Weather forecast</h1>
             <p>This component demonstrates fetching data from the server.</p>
-            <Table key="fetchTable" columns={columns} dataSource={forecasts} onChange={onChange} />
+            <Table key="fetchTable" columns={columns} dataSource={forecasts} loading={loading} />
         </div>
     );
-
 }
 export default FetchData;
